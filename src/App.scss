@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+@import "../src/colors.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Limelight", cursive;
+  font-family: "Tektur", cursive;
+  font-family: 'Roboto Mono', monospace;
+  background-color: $background-color;
+  color: $text-color;
+
+  &::-webkit-scrollbar{
+    // width: 2px;
+    height: .6vw;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 10rem;
+
+      &:hover{
+        background-color: $text-color;
+      }
+    
+  }
+  
+  &::-webkit-scrollbar-track{
+    background-color: $background-color;
+
+  }
+
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  //fixed the box size such that if any size inside increases
+  //then contents inside shrinks. like below img has size 80%
+
+  > a {
+    height: 100%;
+    > img {
+      height: 85%;
+      padding: 0.5rem;
+      border-radius: 10rem;
+    }
+  }
+
+  > div {
+    width: 100%;
+    margin-left: 1rem;
+    > a {
+      color: inherit;
+      margin: 1rem;
+      font-size: 1.4rem;
+      text-decoration: none;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  > svg {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    // margin-right: 1rem;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+@media screen and (max-width:"420px") {
+  .header {
+  height: 80px;
+  > div {
+    display: none;
+  }
+
+  > svg {
+   display: none;
+  }
+}
+}

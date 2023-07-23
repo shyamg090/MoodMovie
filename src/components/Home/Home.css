@@ -1,0 +1,77 @@
+.banner {
+  height: 600px;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner h1, .banner h2 {
+  background-color: rgba(245, 222, 179, 0);
+  z-index: 10;
+  font-size: 3rem;
+  width: 50%;
+  word-spacing: 2px;
+  padding: 1rem;
+}
+.banner h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  word-spacing: 2px;
+}
+.banner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.row {
+  color: #ffffff;
+  padding: 1.5rem;
+  background-color: black;
+}
+.row > h1 {
+  font-size: 2rem;
+}
+.row > div {
+  display: flex;
+  overflow-x: auto;
+}
+
+.card {
+  cursor: pointer;
+}
+.card > img {
+  width: 12rem;
+  margin: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: 0.4s;
+}
+.card > img:hover {
+  transform: translateY(-8px);
+}
+
+@media screen and (max-width: 420px) {
+  .banner h1, .banner h2 {
+    font-size: 1.5rem;
+    width: 60%;
+    word-spacing: 2px;
+    padding: 1rem;
+  }
+  .banner h2 {
+    font-size: 1rem;
+  }
+  .banner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+  }
+}/*# sourceMappingURL=Home.css.map */

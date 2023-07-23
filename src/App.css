@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Limelight", cursive;
+  font-family: "Tektur", cursive;
+  font-family: "Roboto Mono", monospace;
+  background-color: black;
+  color: #ffffff;
+}
+*::-webkit-scrollbar {
+  height: 0.6vw;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.452);
+  border-radius: 10rem;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff;
+}
+*::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.header > a {
+  height: 100%;
+}
+.header > a > img {
+  height: 85%;
+  padding: 0.5rem;
+  border-radius: 10rem;
+}
+.header > div {
+  width: 100%;
+  margin-left: 1rem;
+}
+.header > div > a {
+  color: inherit;
+  margin: 1rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.header > div > a:hover {
+  color: #64CCC5;
+}
+.header > svg {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.header > svg:hover {
+  color: #64CCC5;
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    height: 80px;
+  }
+  .header > div {
+    display: none;
+  }
+  .header > svg {
+    display: none;
+  }
+}/*# sourceMappingURL=App.css.map */
