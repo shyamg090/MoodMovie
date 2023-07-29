@@ -6,21 +6,22 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  h1, h2{
+  h1,
+  h2 {
     background-color: rgba(245, 222, 179, 0);
     z-index: 10;
+    position: relative;
     font-size: 3rem;
     width: 50%;
     word-spacing: 2px;
     padding: 1rem;
   }
-  h2{
+  h2 {
     font-size: 1.5rem;
     margin-top: 1rem;
     word-spacing: 2px;
@@ -32,7 +33,7 @@
     height: 100%;
     position: absolute;
     background-color: $background-color;
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -65,23 +66,45 @@
   }
 }
 
-@media screen and (max-width: "420px") {
-.banner {
-  h1, h2{
-    font-size: 1.5rem;
-    width: 60%;
-    word-spacing: 2px;
-    padding: 1rem;
-  }
-  h2{
-    font-size: 1rem;
+@media screen and (max-width: "620px") {
+  .banner {
+    // height: 600px;
+    h1,
+    h2 {
+      font-size: 1.5rem;
+      width: 60%;
+      word-spacing: 2px;
+      padding: 1rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
   }
 
-}
-
-.row{
-  >h1{
-    font-size: 1.7rem;
+  .row {
+    > h1 {
+      font-size: 1.7rem;
+    }
   }
 }
+@media screen and (max-width: "1040px") {
+  .banner {
+    // height: 70vh;
+    h1,
+    h2 {
+      font-size: 1.6rem;
+      width: 60%;
+      word-spacing: 2px;
+      padding: 0.4rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .row {
+    > h1 {
+      font-size: 1.5rem;
+    }
+  }
 }

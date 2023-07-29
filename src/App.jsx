@@ -6,6 +6,7 @@ import Tvshows from "./components/tvshowsC/Tvshows";
 import Movies from "./components/moviesC/Movies";
 import Trending from "./components/trendingC/Trending";
 import Moodbing from "./components/moodbingC/Moodbing";
+import Error from "./components/errorpage/Error";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/moodbing" element={<Moodbing />} />
+          <Route path="/*" element={<Error/>} />
         </Routes>
       </Router>
     </>

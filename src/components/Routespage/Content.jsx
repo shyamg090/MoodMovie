@@ -3,7 +3,7 @@ import "./mainpage.scss";
 import { LiaImdb } from "react-icons/lia";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 
-const imgurl = "https://image.tmdb.org/t/p/original";
+const imgurl = "https://image.tmdb.org/t/p/w500";
 
 const Content = ({ item }) => {
   // console.log(item);
