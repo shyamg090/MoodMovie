@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 @import "../src/colors.scss";
 
@@ -9,30 +9,28 @@
   margin: 0;
   font-family: "Limelight", cursive;
   font-family: "Tektur", cursive;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   background-color: $background-color;
   color: $text-color;
+  cursor: pointer;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     // width: 2px;
-    height: .6vw;
+    height: 0.6vw;
   }
 
-  &::-webkit-scrollbar-thumb{
+  &::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.452);
     border-radius: 10rem;
 
-      &:hover{
-        background-color: $text-color;
-      }
-    
+    &:hover {
+      background-color: $text-color;
+    }
   }
-  
-  &::-webkit-scrollbar-track{
+
+  &::-webkit-scrollbar-track {
     background-color: $background-color;
-
   }
-
 }
 
 .header {
@@ -47,46 +45,86 @@
   > a {
     height: 100%;
     > img {
+      margin: 0.5rem;
+      // padding: 1rem;
       height: 85%;
       padding: 0.5rem;
-      border-radius: 10rem;
+      // border-radius: 10rem;
     }
   }
 
   > div {
     width: 100%;
     margin-left: 1rem;
-    > a {
-      color: inherit;
-      margin: 1rem;
-      font-size: 1.4rem;
-      text-decoration: none;
-      &:hover {
-        color: $blue;
+    display: flex;
+    // background-color: aliceblue;
+    > .link1,
+    .link2 {
+      > a {
+        color: inherit;
+        margin: 1rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+        &:hover {
+          color: $blue;
+        }
       }
     }
   }
 
-  > svg {
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 1rem;
-    // margin-right: 1rem;
-    &:hover {
-      color: $blue;
+  // > svg {
+  //   font-size: 2rem;
+  //   cursor: pointer;
+  //   padding: 1rem;
+  //   // margin-right: 1rem;
+  //   &:hover {
+  //     color: $blue;
+  //   }
+  // }
+}
+
+@media screen and (max-width: "620px") {
+  .header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > img {
+        width: 100px;
+        height: 50px;
+      }
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 50%;
+      > .link1,
+      .link2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        a {
+          margin: 1rem;
+          text-decoration: none;
+          &:hover {
+            background-color: grey;
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+
+    > svg {
+      display: none;
     }
   }
-}
-
-@media screen and (max-width:"620px") {
-  .header {
-  height: 80px;
-  > div {
-    display: none;
-  }
-
-  > svg {
-   display: none;
-  }
-}
 }
