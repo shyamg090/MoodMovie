@@ -1,0 +1,157 @@
+@import "../../colors.scss";
+
+.mainpage {
+  .middiv {
+    position: relative;
+    padding: 0.2rem;
+  }
+}
+
+.cardsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  > .cardsImg {
+    margin-right: 1rem;
+    width: 15rem;
+    padding: 1rem;
+    background-color: rgba(255, 0, 0, 0);
+    img {
+      width: 100%;
+      height: 70%;
+      background-size: cover;
+      border-radius: 1rem;
+    }
+  }
+
+  > .cardsContent {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    >.title{
+      h1{
+        margin-bottom: 1rem;
+            font-size: 2rem;
+      }
+      h2{
+        font-size: 1.3rem;
+      }
+    }
+    > .ratings {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 1.5rem;
+      > h4 {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        > svg {
+          margin-right: 1rem;
+          width: 2.2rem;
+          height: 2.1rem;
+        }
+      }
+
+      > button {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-color: aliceblue;
+        &:hover{
+          background-color: grey;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "620px") {
+  .cardsRow {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1rem;
+    // background-color: antiquewhite;
+
+    > .cardsImg {
+      width: 100%;
+      margin: 0rem;
+      // background-color: rgba(57, 57, 57, 0.34);
+      border-radius: 1rem;
+      // padding: 1rem;
+      img {
+        width: 15rem;
+        height: 20rem;
+        border-radius: 1rem;
+        transition: 1s;
+      }
+    }
+
+    > .cardsContent {
+      width: 100%;
+      margin-bottom: 1rem;
+      // padding: 1rem;
+      > .title {
+        > h1,
+        h2 {
+          font-size: 1rem;
+          margin: 0.5rem;
+        }
+        > h1 {
+          font-size: 1.6rem;
+        }
+      }
+      > .ratings {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > h4 {
+          display: flex;
+          justify-content: center;
+          > svg {
+            margin-right: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+        > button {
+          padding: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* 
+.cardsContent{
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 300px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+
+   >h1,h2{
+      font-size: 1.1rem;
+      background-color: rgba(255, 0, 0, 0);
+      z-index: 100;
+   }
+
+   &::after{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.468) ;
+   }
+*/

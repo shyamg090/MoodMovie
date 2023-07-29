@@ -6,26 +6,18 @@ import { BsSearch } from "react-icons/bs";
 const Header = () => {
   return (
     <nav className="header">
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
 
-      <Link to="/"><img src={logo} alt="logo" /></Link>
-      
       <div>
-        <Link to="/tvshows">
-          Tv Shows
-        </Link>
-        <Link to="/movies">
-          Movies
-        </Link>
-        <Link to="/trending">
-          Trending
-        </Link>
-        <Link to="/moodbing">
-          Mood Bing
-        </Link>
+        <Link to="/tvshows">Tv Shows</Link>
+        <Link to="/movies">Movies</Link>
+        <Link to="/trending">Trending</Link>
+        <Link to="/moodbing">Mood Bing</Link>
       </div>
 
       <BsSearch />
-
     </nav>
   );
 };

@@ -7,13 +7,14 @@ const Row = ({title , arr}) => {
   return (
     <div className="row">
 
-      <h1>{title}</h1>
+      <h1>{}</h1>
+      <h1>{ title ? title : "loading"}</h1>
       
       <div>
       { 
        arr.map((item)=>{
         // console.log(item.id);
-        return <Card key={item.id} img={item.poster_path} />
+        return <Card key={item.id} img={item?.poster_path} />
         ;
         })
       }
