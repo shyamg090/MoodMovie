@@ -10,15 +10,11 @@ const Header = () => {
         <img src={logo} alt="logo" />
       </Link>
 
-      <div>
-        <div className="link1">
-          <Link to="/tvshows">Tv Shows</Link>
+      <div className="headerLinks">
+          <Link to="/tvshows">Tv</Link>
           <Link to="/movies">Movies</Link>
-        </div>
-        <div className="link2">
           <Link to="/trending">Trending</Link>
-          <Link to="/moodbing">Mood Bing</Link>
-        </div>
+          <Link to="/moodbing">Bing</Link>
       </div>
 
       {/* <BsSearch /> */}

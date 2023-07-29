@@ -5,8 +5,9 @@ import { BsFillCalendarDateFill } from "react-icons/bs";
 
 const imgurl = "https://image.tmdb.org/t/p/w500";
 
+
 const Content = ({ item }) => {
-  // console.log(item);
+  console.log(item);
   return (
     <div className="cardsRow">
       <div className="cardsImg">

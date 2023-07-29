@@ -36,92 +36,97 @@
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   box-sizing: border-box;
   //fixed the box size such that if any size inside increases
   //then contents inside shrinks. like below img has size 80%
 
   > a {
     height: 100%;
+    margin-right: 1.5rem;
+    align-items: center;
     > img {
       margin: 0.5rem;
       // padding: 1rem;
-      height: 85%;
+      height: 80%;
       padding: 0.5rem;
       // border-radius: 10rem;
     }
   }
 
-  > div {
-    width: 100%;
-    margin-left: 1rem;
+  > .headerLinks {
     display: flex;
-    // background-color: aliceblue;
-    > .link1,
-    .link2 {
-      > a {
-        color: inherit;
-        margin: 1rem;
-        font-size: 1.4rem;
-        text-decoration: none;
-        &:hover {
-          color: $blue;
-        }
+    height: 100%;
+    font-size: 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
+
+    justify-content: flex-start;
+    justify-content: center;
+    > a {
+      background-color: rgba(55, 9, 9, 0);
+      border-radius: 0.4rem;
+      margin-right: 3rem;
+      padding: 0.4rem;
+      text-decoration: none;
+      &:hover {
+        color: $blue;
       }
     }
   }
+}
 
-  // > svg {
-  //   font-size: 2rem;
-  //   cursor: pointer;
-  //   padding: 1rem;
-  //   // margin-right: 1rem;
-  //   &:hover {
-  //     color: $blue;
-  //   }
-  // }
+.footer {
+  position: relative;
+  height: 150px;
+  background-color: $background-color;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  > .links-logo {
+    display: flex;
+    flex-direction: row;
+    > svg {
+      margin: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 }
 
 @media screen and (max-width: "620px") {
   .header {
     height: 150px;
+    padding: 0;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: left;
+    align-items: flex-start;
 
     > a {
       display: flex;
-      height: 50px;
+      height: 100px;
+      margin: 0;
       > img {
-        width: 60px;
-        height: 30px;
+        width: 90px;
+        height: 70px;
       }
     }
 
-    > div {
+    > .headerLinks {
+      font-size: 1rem;
       display: flex;
-      justify-content: space-evenly;
-      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
       height: 60%;
-      width: 100%;
-      > .link1,
-      .link2 {
-        width: 100%;
-        display: flex;
-        text-align: center;
-        justify-content: space-evenly;
-        
-        a {
-          margin: .3rem;
-          text-decoration: none;
-          font-size: 1rem;
-          &:hover {
-            background-color: grey;
-            padding: 0.5rem;
-          }
-        }
+      width: 89vw;
+      margin: 0;
+      > a {
+        margin-right: 1.5rem;
       }
     }
 
