@@ -65,6 +65,27 @@
     }
   }
 }
+@media screen and (max-width: "1040px") {
+  .banner {
+    // height: 70vh;
+    h1,
+    h2 {
+      font-size: 1.6rem;
+      width: 60%;
+      word-spacing: 2px;
+      padding: 0.4rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .row {
+    > h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
 
 @media screen and (max-width: "620px") {
   .banner {
@@ -84,27 +105,6 @@
   .row {
     > h1 {
       font-size: 1.7rem;
-    }
-  }
-}
-@media screen and (max-width: "1040px") {
-  .banner {
-    // height: 70vh;
-    h1,
-    h2 {
-      font-size: 1.6rem;
-      width: 60%;
-      word-spacing: 2px;
-      padding: 0.4rem;
-    }
-    h2 {
-      font-size: 1.1rem;
-    }
-  }
-
-  .row {
-    > h1 {
-      font-size: 1.5rem;
     }
   }
 }
