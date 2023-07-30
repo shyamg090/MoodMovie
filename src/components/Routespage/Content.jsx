@@ -17,7 +17,7 @@ const Content = ({ item }) => {
         {/* <img src={item.backdrop_path} alt="movimg" /> */}
         <div className="title">
           <h1>
-            {item?.original_title} 
+            {item?.title} 
             {item?.name}
           </h1>
           <h2>{item?.overview}</h2>
