@@ -33,14 +33,14 @@
     height: 100%;
     position: absolute;
     background-color: $background-color;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 }
 
 .row {
   color: $text-color;
   padding: 1.5rem;
-  // margin: 1rem;
+  margin: 1rem;
   background-color: $background-color;
 
   > h1 {
@@ -74,15 +74,16 @@
       font-weight: 700;
       width: 60%;
       word-spacing: 2px;
-      padding: 0 0 0.1rem .5rem;
+      padding: 0 0 0.1rem 0.5rem;
     }
     h2 {
       font-size: 1rem;
-       padding: 0 0 0.3rem .5rem;
+      padding: 0 0 0.3rem 0.5rem;
     }
   }
 
   .row {
+    margin: 0.1rem;
     > h1 {
       font-size: 1.3rem;
     }
