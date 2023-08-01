@@ -90,13 +90,17 @@
   }
 }
 
-@media (hover : hover) {
-      .card:hover {
+@media (hover: hover) {
+  .card {
+    img:hover {
       transform: translateY(-8px);
     }
+  }
 }
-@media (hover : none) {
-      .card:active {
+@media (hover: none) {
+  .card {
+    img:active {
       transform: translateY(-8px);
     }
+  }
 }
