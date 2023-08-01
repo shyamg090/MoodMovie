@@ -92,15 +92,21 @@
 
 @media (hover: hover) {
   .card {
-    img:hover {
-      transform: translateY(-8px);
+    img {
+      transition: 1s;
+      &:hover {
+        transform: translateY(-8px);
+      }
     }
   }
 }
 @media (hover: none) {
   .card {
-    img:active {
-      transform: translateY(0px);
+    img {
+      transition: 1s;
+      &:active {
+        transform: translateY(-8px);
+      }
     }
   }
 }
