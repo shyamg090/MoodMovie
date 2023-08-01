@@ -90,24 +90,8 @@
   }
 }
 
-// @media screen and (max-width: "620px") {
-//   .banner {
-//     // height: 600px;
-//     h1,
-//     h2 {
-//       font-size: 1.5rem;
-//       width: 60%;
-//       word-spacing: 2px;
-//       padding: 1rem;
-//     }
-//     h2 {
-//       font-size: 1rem;
-//     }
-//   }
-
-//   .row {
-//     > h1 {
-//       font-size: 1.7rem;
-//     }
-//   }
-// }
+@media (hover : hover) and (pointer : fine){
+      .card:hover {
+      transform: translateY(-8px);
+    }
+}
