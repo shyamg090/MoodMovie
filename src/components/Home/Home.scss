@@ -95,8 +95,8 @@
       transform: translateY(-8px);
     }
 }
-@media (hover : hover) {
+@media (hover : none) {
       .card:hover {
-      transform: translateY(-8px);
+      transform: inherit;
     }
 }
