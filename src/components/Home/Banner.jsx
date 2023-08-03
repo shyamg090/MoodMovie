@@ -20,7 +20,7 @@ const Banner = ({ arr }) => {
           : "#001C30",
       }}
     >
-      {console.log("random working??? "+i)}
+      {/* {console.log("random working??? "+i)} */}
       {arr[0] && <h1>{arr[i]?.title}</h1>}
       {arr[0] && <h2>{arr[i]?.overview}</h2>}
     </div>

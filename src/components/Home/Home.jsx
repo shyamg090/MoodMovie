@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <section className="home">
-      <Banner key={0} arr={popMov} />
+      <Banner key={0} arr={trendingMov} />
 
       <Row title={"Popular"} key={1} arr={popMov} />
       <Row title={"Trending Movies"} key={2} arr={trendingMov} />
