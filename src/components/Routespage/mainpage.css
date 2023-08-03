@@ -18,8 +18,8 @@
 .cardsRow > .cardsImg img {
   width: 100%;
   height: 70%;
-  background-size: cover;
   border-radius: 1rem;
+  border-color: aliceblue;
 }
 .cardsRow > .cardsContent {
   width: 60%;
@@ -30,6 +30,7 @@
 .cardsRow > .cardsContent > .title h1 {
   margin-bottom: 1rem;
   font-size: 2rem;
+  color: #ff0000;
 }
 .cardsRow > .cardsContent > .title h2 {
   font-size: 1.3rem;
@@ -47,7 +48,7 @@
   align-items: center;
 }
 .cardsRow > .cardsContent > .ratings > h4 > svg {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   width: 2.2rem;
   height: 2.1rem;
 }
@@ -57,10 +58,10 @@
   border-color: aliceblue;
 }
 .cardsRow > .cardsContent > .ratings > button:hover {
-  background-color: grey;
+  background-color: #ff0000;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 700px) {
   .cardsRow {
     display: flex;
     flex-direction: column;
@@ -68,7 +69,7 @@
     margin-bottom: 1rem;
   }
   .cardsRow > .cardsImg {
-    width: 100%;
+    width: 90%;
     margin: 0rem;
     border-radius: 1rem;
   }
@@ -79,19 +80,19 @@
     transition: 1s;
   }
   .cardsRow > .cardsContent {
-    width: 100%;
+    width: 95%;
     margin-bottom: 1rem;
   }
   .cardsRow > .cardsContent > .title > h1,
   .cardsRow > .cardsContent > .title h2 {
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin: 0.5rem;
   }
   .cardsRow > .cardsContent > .title > h1 {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
   .cardsRow > .cardsContent > .ratings {
-    padding: 1rem;
+    padding: 0.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,6 +100,7 @@
   .cardsRow > .cardsContent > .ratings > h4 {
     display: flex;
     justify-content: center;
+    font-size: 0.9rem;
   }
   .cardsRow > .cardsContent > .ratings > h4 > svg {
     margin-right: 0.5rem;
@@ -107,31 +109,6 @@
   }
   .cardsRow > .cardsContent > .ratings > button {
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
-}
-/* 
-.cardsContent{
-   background-repeat: no-repeat;
-   background-size: cover;
-   position: relative;
-   height: 300px;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
-
-   >h1,h2{
-      font-size: 1.1rem;
-      background-color: rgba(255, 0, 0, 0);
-      z-index: 100;
-   }
-
-   &::after{
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.468) ;
-   }
-*//*# sourceMappingURL=mainpage.css.map */
+}/*# sourceMappingURL=mainpage.css.map */

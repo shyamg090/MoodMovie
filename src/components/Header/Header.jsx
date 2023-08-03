@@ -1,24 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 import logo from "../image/logo.png";
 import { Link } from "react-router-dom";
+import {TfiAlignJustify} from "react-icons/tfi"
+import { BiX } from "react-icons/bi";
 // import { BsSearch } from "react-icons/bs";
 
 const Header = () => {
+  const navbarRef= useRef();
+
+  const navbarShowFun = ()=>{
+    navbarRef.current.classList.toggle("navbar-toggle");
+  }
+
   return (
-    <nav className="header">
+    <div className="header">
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>
-
-      <div className="headerLinks">
-          <Link to="/tvshows">Tv</Link>
-          <Link to="/movies">Movies</Link>
-          <Link to="/trending">Trending</Link>
-          <Link to="/moodbing">Bing</Link>
+      <div ref={navbarRef} className="headerLinks navshow">
+        <Link className="homelink" onClick={()=>navbarShowFun()}  to="/">Home</Link>
+        <Link onClick={()=>navbarShowFun()}  to="/tvshows">Tv</Link>
+        <Link onClick={()=>navbarShowFun()}  to="/movies">Movies</Link>
+        <Link onClick={()=>navbarShowFun()}  to="/trending">Trending</Link>
+        <Link onClick={()=>navbarShowFun()}  to="/moodbing">Bing</Link>
+        <button onClick={()=>navbarShowFun()} className="btn-show">
+          <BiX />
+        </button>
       </div>
-
-      {/* <BsSearch /> */}
-    </nav>
+      <button onClick={()=>navbarShowFun()} className="btn">
+        <TfiAlignJustify />
+      </button>
+    </div>
   );
 };
 

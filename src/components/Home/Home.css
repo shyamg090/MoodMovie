@@ -8,9 +8,11 @@
   flex-direction: column;
   justify-content: center;
 }
-.banner h1, .banner h2 {
+.banner h1,
+.banner h2 {
   background-color: rgba(245, 222, 179, 0);
   z-index: 10;
+  position: relative;
   font-size: 3rem;
   width: 50%;
   word-spacing: 2px;
@@ -27,12 +29,13 @@
   height: 100%;
   position: absolute;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .row {
   color: #ffffff;
   padding: 1.5rem;
+  margin: 1rem;
   background-color: black;
 }
 .row > h1 {
@@ -56,17 +59,39 @@
   transform: translateY(-8px);
 }
 
-@media screen and (max-width: 420px) {
-  .banner h1, .banner h2 {
-    font-size: 1.5rem;
+@media screen and (max-width: 1040px) {
+  .banner h1,
+  .banner h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
     width: 60%;
     word-spacing: 2px;
-    padding: 1rem;
+    padding: 0 0 0.1rem 0.5rem;
   }
   .banner h2 {
     font-size: 1rem;
+    padding: 0 0 0.3rem 0.5rem;
+  }
+  .row {
+    margin: 0.1rem;
   }
   .row > h1 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
+  }
+}
+@media (hover: hover) {
+  .card img {
+    transition: 1s;
+  }
+  .card img:hover {
+    transform: translateY(-8px);
+  }
+}
+@media (hover: none) {
+  .card img {
+    transition: 1s;
+  }
+  .card img:active {
+    transform: translateY(-8px);
   }
 }/*# sourceMappingURL=Home.css.map */

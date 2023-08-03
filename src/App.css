@@ -29,46 +29,112 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
 }
 .header > a {
-  height: 100%;
+  height: 80%;
+  margin: 1.5rem;
+  align-items: center;
 }
 .header > a > img {
-  height: 85%;
+  height: 80%;
   padding: 0.5rem;
-  border-radius: 10rem;
 }
-.header > div {
-  width: 100%;
-  margin-left: 1rem;
+.header > .headerLinks {
+  display: flex;
+  height: 100%;
+  font-size: 1.7rem;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: center;
+  margin-left: 2rem;
 }
-.header > div > a {
-  color: inherit;
-  margin: 1rem;
-  font-size: 1.4rem;
+.header > .headerLinks > .btn-show {
+  display: none;
+}
+.header > .headerLinks > a {
+  width: 8rem;
+  background-color: rgba(55, 9, 9, 0);
+  text-align: center;
+  margin-right: 3rem;
+  padding: 0.4rem;
   text-decoration: none;
 }
-.header > div > a:hover {
-  color: #64CCC5;
+.header > .headerLinks > a:hover {
+  color: #ff0000;
 }
-.header > svg {
+.header > .headerLinks > .homelink {
+  display: none;
+}
+.header > .btn {
+  margin-right: 1rem;
   font-size: 2rem;
-  cursor: pointer;
+  background-color: rgba(240, 248, 255, 0);
   padding: 1rem;
+  border-color: rgba(0, 0, 0, 0);
 }
-.header > svg:hover {
-  color: #64CCC5;
+.header > .btn > svg {
+  background-color: none;
+}
+.header > .btn > svg:hover {
+  color: red;
 }
 
-@media screen and (max-width: 420px) {
+.footer {
+  position: relative;
+  height: 150px;
+  background-color: black;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer > .links-logo {
+  display: flex;
+  flex-direction: row;
+}
+.footer > .links-logo > svg {
+  margin: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
   .header {
-    height: 80px;
+    height: 70px;
   }
-  .header > div {
-    display: none;
+  .header .navshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    z-index: 10001;
+    transition: 1s;
+    transform: translateY(-100vh);
   }
-  .header > svg {
-    display: none;
+  .header .navshow > a {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .header .navshow > .btn-show {
+    display: block;
+    position: absolute;
+    font-size: 2.4rem;
+    top: 1rem;
+    right: 1rem;
+    border-color: rgba(240, 248, 255, 0);
+  }
+  .header .navshow > .homelink {
+    display: block;
+  }
+  .header .navbar-toggle {
+    transform: none;
   }
 }/*# sourceMappingURL=App.css.map */

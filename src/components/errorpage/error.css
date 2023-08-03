@@ -1,0 +1,36 @@
+.error {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("https://i.gifer.com/origin/57/57f469a384f344c1207b2c96c2d1797b_w200.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.error > h1 {
+  font-size: 5rem;
+}
+.error > h2 {
+  font-size: 1.5rem;
+}
+.error a {
+  font-size: 2rem;
+  text-decoration: none;
+}
+.error h1, .error h2, .error a {
+  z-index: 100;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+.error::after {
+  content: "";
+  width: 100%;
+  height: 80vh;
+  opacity: 1.3;
+  background-color: rgba(0, 0, 0, 0.584);
+  position: absolute;
+}/*# sourceMappingURL=error.css.map */
