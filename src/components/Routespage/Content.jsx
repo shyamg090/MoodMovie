@@ -9,7 +9,7 @@ const youtube = "https://www.youtube.com/watch"
 
 const Content = ({ item }) => {
   const { url, movie, videos, axios } = useContext(Appcontext);
-  const [video, setvideo] = useState([]);
+  const [video, setvideo] = useState('');
 
   const getvideo = async (id) => {
     const {
@@ -19,10 +19,11 @@ const Content = ({ item }) => {
         process.env.REACT_APP_API_KEY
       }
       `
-    );
-    setvideo([...results]);
+      );
+    const [trailers] = [...results]
+    setvideo(trailers);
     console.log(video);
-    window.open(`${youtube}?v=${video[1]?.key}`, "_blank");
+    window.open(`${youtube}?v=${video}`, "_blank");
   };
 
   return (
@@ -49,8 +50,8 @@ const Content = ({ item }) => {
           </h4>
           {/* {console.log(item.id)} */}
 
-          <button onClick={()=>getvideo(item.id)}> watch now
-          </button>
+          <button onClick={() => getvideo(item.id)}> 
+Watch Now          </button>
         </div>
       </div>
     </div>
