@@ -62,9 +62,9 @@
 @media screen and (max-width: 1040px) {
   .banner h1,
   .banner h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    width: 60%;
+    width: 65%;
     word-spacing: 2px;
     padding: 0 0 0.1rem 0.5rem;
   }

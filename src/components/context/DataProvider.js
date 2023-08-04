@@ -13,15 +13,14 @@ export const DataProvider = ({ children }) => {
   const day = "day";
   const top_rated = "top_rated";
   const videos = "videos";
+
   // const page= "page"
   // const imgurl = "https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png";
 
   const [popMov, setPopMov] = useState([]);
-  // const [popmovPage, setpopmovPage] = useState([]);
   const [trendingMov, setTrendingMov] = useState([]);
   const [trendingTv, setTrendingTv] = useState([]);
   const [topRate, setTopRate] = useState([]);
-  const [video, setvideo] = useState([]);
 
   // ----------------------to get movies-----------------------
   const getpopMov = async () => {
@@ -56,24 +55,14 @@ export const DataProvider = ({ children }) => {
     );
     setTopRate(results);
   };
-  const getvideo = async () => {
-    const {
-      data: { results },
-    } = await axios.get(
-      `${url}/${movie}/${198102}/${videos}?api_key=${
-        process.env.REACT_APP_API_KEY
-      }`
-    );
-    setvideo(results);
-    console.log(results);
-  };
 
+  //api.themoviedb.org/3/movie/297762/videos?api_key=###&language=en-US
+  // https://api.themoviedb.org/3/movie/297762/videos?api_key=8b53a679d7485b404cf4059d85e1697d&language=en-US
   useEffect(() => {
     getpopMov();
     gettrendMov();
     gettrendTv();
     gettopRate();
-    getvideo();
   }, []);
 
   return (
@@ -83,7 +72,10 @@ export const DataProvider = ({ children }) => {
         trendingMov,
         trendingTv,
         topRate,
-        video,
+        videos,
+        url,
+        axios,
+        movie
       }}
     >
       {children}
