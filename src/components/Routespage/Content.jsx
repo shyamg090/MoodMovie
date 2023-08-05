@@ -9,9 +9,11 @@ const youtube = "https://www.youtube.com/watch"
 
 const Content = ({ item }) => {
   const { url, movie, videos, axios } = useContext(Appcontext);
-  const [video, setvideo] = useState('');
+  const [video, setvideo] = useState(false);
 
   const getvideo = async (id) => {
+    console.log(item);
+        console.log(id);
     const {
       data: { results },
     } = await axios.get(
@@ -20,10 +22,10 @@ const Content = ({ item }) => {
       }
       `
       );
+    // console.log(results);
     const [trailers] = [...results]
-    setvideo(trailers);
-    console.log(video);
-    window.open(`${youtube}?v=${video}`, "_blank");
+    setvideo(trailers.key);
+    // console.log(trailers);
   };
 
   return (
@@ -48,15 +50,13 @@ const Content = ({ item }) => {
             <BsFillCalendarDateFill /> {item?.release_date}
             {item?.first_air_date}
           </h4>
-          {/* {console.log(item.id)} */}
-
-          <button onClick={() => getvideo(item.id)}> 
-Watch Now          </button>
+          {video ? <button onClick={() => window.open(`${youtube}?v=${video}`, "_blank") }> Watch Now </button> : <button onClick={() => getvideo(item.id)}>Get link</button>}
         </div>
       </div>
     </div>
   );
 };
+    // window.open(`${youtube}?v=${video}`, "_blank");
 
 export default Content;
 
