@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 
 const imgurl = "https://image.tmdb.org/t/p/w500";
-// const youtube = "https://www.youtube.com/watch"
 
 const Content = ({ item, datatype }) => {
 
@@ -14,7 +13,6 @@ const Content = ({ item, datatype }) => {
         <img src={`${imgurl}/${item?.poster_path}`} alt="imageposter" />
       </div>
       <div className="cardsContent">
-        {/* <img src={item.backdrop_path} alt="movimg" /> */}
         <div className="title">
           <h1>
             {item?.title}
@@ -38,7 +36,6 @@ const Content = ({ item, datatype }) => {
     </div>
   );
 };
-// window.open(`${youtube}?v=${video}`, "_blank");
 
 export default Content;
 //           {video ? <button onClick={() => window.open(`${youtube}?v=${video}`, "_blank") }> Watch Now </button> : <button onClick={() => getvideo(item.id)}>Get link</button>}

@@ -1,6 +1,7 @@
 @import "../../colors.scss";
 
 .detailspage {
+
     // height: 90vh;
     >.titlepart {
         margin: 1rem 0;
@@ -22,7 +23,7 @@
         align-items: center;
 
         >img {
-            background-color: aliceblue;
+            // background-color: aliceblue;
             border-radius: 1rem;
             width: 300px;
             height: 380px;
@@ -41,17 +42,18 @@
                 font-size: 1.3rem;
                 display: flex;
                 flex-direction: column;
-                overflow-x: auto;
 
                 >.cast-card {
                     display: flex;
                     font-size: 1rem;
+                    overflow-x: auto;
 
                     >.cast-inside {
                         margin: 1rem;
                         font-size: .8rem;
                         display: flex;
                         flex-direction: column;
+                        align-items: center;
 
                         >img {
                             width: 100px;
@@ -78,6 +80,9 @@
                     margin: 1rem 0;
                     display: flex;
                     justify-content: flex-start;
+                    flex-wrap: wrap;
+
+                    align-items: center;
 
                     >svg {
                         width: 2.5rem;
@@ -85,9 +90,13 @@
                         margin: 0 1rem 0 0;
                     }
 
-                    >h2 {
-                        font-size: 1.5rem;
-                        margin: 0 2rem 0 0;
+                    >.genre-items {
+                        display: flex;
+                        align-items: center;
+                        >h2 {
+                            font-size: 1.5rem;
+                            margin: 0 2rem 0 0;
+                        }
                     }
                 }
 
@@ -95,6 +104,7 @@
                     margin: 1rem 0;
                     display: flex;
                     justify-content: flex-start;
+                    align-items: center;
 
                     >svg {
                         width: 2.5rem;
@@ -115,9 +125,10 @@
 
 @media screen and (max-width: "1020px") {
     .detailspage {
-        .titlepart{
-           >h1{
+        .titlepart {
+            >h1 {
                 font-size: 1.5rem;
+                text-align: center;
             }
         }
 
@@ -136,7 +147,7 @@
 
                 >h2 {
                     text-align: center;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                 }
 
                 >.cast {
@@ -158,9 +169,13 @@
                             height: 2rem;
                         }
 
-                        >h2 {
-                            font-size: 1.1rem;
+                        >.genre-items {
+                            >h2 {
+                                margin: .5rem 1rem 0 0;
+                                font-size: 1.1rem;
+                            }
                         }
+
                     }
 
                     >.imdb {

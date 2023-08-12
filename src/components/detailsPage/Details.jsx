@@ -53,6 +53,7 @@ const Details = () => {
     const [...castArr] = data.cast;
     // console.log(castArr);
     setCastdetails(castArr);
+    setLoading(false);
   }
 
   // const getvideo = async (id) => {
@@ -112,8 +113,15 @@ const Details = () => {
           <div className="details">
             <div className="genres">
               <FaFilm />
-              <h2>{genre[0]?.name}</h2>
-              <h2>{genre[1]?.name}</h2>
+              {
+                genre.slice(0,).map((item) => {
+                  return (
+                    <div className='genre-items' key={item.id}>
+                      <h2>{item?.name}</h2>
+                    </div>
+                  )
+                })
+              }
             </div>
 
             <div className="imdb">
