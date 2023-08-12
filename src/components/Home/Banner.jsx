@@ -6,7 +6,7 @@ const imgurl = "https://image.tmdb.org/t/p/original";
 const Banner = ({ arr }) => {
 
   const i = setInterval(() => {
-        let i = Math.floor(Math.random() * 20 + 1);
+        let i = Math.floor(Math.random() * 10 + 1);
         return i;
   }, 2000);
   
