@@ -6,7 +6,7 @@ import Appcontext from "../context/DataProvider";
 const Tvshows = () => {
     const { trendingTv } = useContext(Appcontext);
   return (
-    <Mainpage  key={100} arr={trendingTv}/>
+    <Mainpage key={100} arr={trendingTv} datatype={'tv'} />
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Card from "./Card";
 import "./Home.scss";
 
-const Row = ({title , arr}) => {
+const Row = ({title , arr , datatype}) => {
   // console.log(key);
   return (
     <div className="row">
@@ -13,8 +13,8 @@ const Row = ({title , arr}) => {
       <div>
       { 
        arr.map((item)=>{
-        // console.log(item.id);
-        return <Card key={item.id} img={item?.poster_path} />
+        // console.log(item);
+        return <Card key={item.id} img={item?.poster_path} movId={item.id} datatype={datatype} />
         ;
         })
       }

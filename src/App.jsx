@@ -8,6 +8,7 @@ import Trending from "./components/trendingC/Trending";
 import Moodbing from "./components/moodbingC/Moodbing";
 import Error from "./components/errorpage/Error";
 import Footer from "./components/Header/Footer";
+import Details from "./components/detailsPage/Details";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/moodbing" element={<Moodbing />} />
-          <Route path="/*" element={<Error/>} />
+          <Route path="/details/:type/:id" element={<Details />} />
+          <Route path="/*" element={<Error />} />
         </Routes>
         <Footer />
       </Router>

@@ -6,7 +6,7 @@ import Appcontext from "../context/DataProvider";
 
 const Trending = () => {
       const { trendingMov } = useContext(Appcontext);
-  return <Mainpage key={100} arr={trendingMov} />;
+  return <Mainpage key={100} arr={trendingMov} datatype={'movie'} />;
 }
 
 export default Trending
