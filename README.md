@@ -21,7 +21,7 @@ MoodMovie is a user-friendly web application that leverages the power of React.j
 ## Features
 
 - Browse popular and trending movies and TV shows.
-- Get detailed information about each movie or TV show, including ratings, release date and more.
+- Get detailed information about each movie or TV show, including ratings, release date, cast and crew and more.
 - Responsive design for a seamless experience on different devices.
 
 ## Demo
@@ -72,6 +72,6 @@ Contributions are welcome! If you find any issues or have suggestions to improve
 
 ## License
 
-[Include the appropriate license for your project, e.g., MIT License, Apache License 2.0, etc.]
+ license - [MIT License]
 
 Happy movie exploring with MoodMovie! 🍿🎬
