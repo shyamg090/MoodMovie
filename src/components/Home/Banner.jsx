@@ -5,24 +5,32 @@ const imgurl = "https://image.tmdb.org/t/p/original";
 
 const Banner = ({ arr }) => {
 
-  const i = setInterval(() => {
-        let i = Math.floor(Math.random() * 10 + 1);
-        return i;
-  }, 2000);
-  
+  // const x = function () {
+  //   let i = 0;
 
+  //   const getRan = () => {
+  //     i = Math.floor(Math.random() * 10) + 1;
+  //     return i;
+  //   }
+  //   const randnum = setTimeout(getRan, 10000);
+  //   return randnum;
+  // };
+
+  // const j = x();
+  const j = 0;
+  
   return (
     <div
       className="banner"
       style={{
         backgroundImage: arr[0]
-          ? `url(${`${imgurl}/${arr[i]?.poster_path}`})`
+          ? `url(${`${imgurl}/${arr[j]?.poster_path}`})`
           : "#001C30",
       }}
     >
-      {/* {console.log("random working??? "+i)} */}
-      {arr[0] && <h1>{arr[i]?.title}</h1>}
-      {arr[0] && <h2>{arr[i]?.overview}</h2>}
+      {/* {console.log("random working??? "+j)} */}
+      {arr[0] && <h1>{arr[j]?.title}</h1>}
+      {arr[0] && <h2>{arr[j]?.overview}</h2>}
     </div>
   );
 };
